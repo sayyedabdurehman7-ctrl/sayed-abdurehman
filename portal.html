@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#635bff" />
+    <meta name="description" content="PixelCraft Studio customer project portal." />
+    <title>Client Portal — PixelCraft Studio</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="framer-theme.css" />
+  </head>
+  <body class="dashboard customer-dashboard">
+    <button class="dash-menu" type="button" aria-label="Open navigation" data-dash-menu><span></span><span></span></button>
+
+    <aside class="dash-sidebar" data-sidebar>
+      <a class="dash-brand" href="index.html" aria-label="PixelCraft Studio home">
+        <span>PC</span><div><strong>PixelCraft</strong><small>Studio</small></div>
+      </a>
+      <div class="workspace-label"><span>Customer workspace</span><strong>Nexa Group</strong></div>
+      <nav class="dash-nav" aria-label="Customer portal navigation">
+        <button class="active" type="button" data-view="overview"><i>⌂</i><span>Overview</span></button>
+        <button type="button" data-view="timeline"><i>↗</i><span>Project timeline</span></button>
+        <button type="button" data-view="files"><i>□</i><span>Files &amp; deliverables</span><b>4</b></button>
+        <button type="button" data-view="messages"><i>✦</i><span>Messages</span><b>2</b></button>
+        <button type="button" data-view="billing"><i>◈</i><span>Billing</span></button>
+      </nav>
+      <div class="sidebar-project">
+        <span>Current project</span>
+        <strong>Nexa Website</strong>
+        <div><i style="width: 68%"></i></div>
+        <small>68% complete</small>
+      </div>
+      <div class="sidebar-bottom">
+        <a href="index.html">← Back to website</a>
+        <a href="admin.html">Switch to admin ↗</a>
+      </div>
+    </aside>
+
+    <main class="dash-main">
+      <header class="dash-topbar">
+        <div><span>Monday, July 6</span><h1>Good morning, Amir.</h1></div>
+        <div class="topbar-actions">
+          <button class="icon-button" type="button" aria-label="Notifications"><span></span>♧</button>
+          <button class="profile-button" type="button"><span>AM</span><div><strong>Amir M.</strong><small>Nexa Group</small></div><b>⌄</b></button>
+        </div>
+      </header>
+
+      <section class="project-hero dash-panel">
+        <div class="project-hero-copy">
+          <div class="dash-eyebrow"><span>Active project</span><i>On schedule</i></div>
+          <h2>Nexa digital<br />experience</h2>
+          <p>A refined website and digital identity built to position Nexa as a modern architecture leader.</p>
+          <div class="project-team"><span>SA</span><span>MK</span><span>JL</span><small>PixelCraft project team</small></div>
+        </div>
+        <div class="project-progress-ring" style="--progress: 68">
+          <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52"/><circle class="progress" cx="60" cy="60" r="52"/></svg>
+          <div><strong>68%</strong><span>Complete</span></div>
+        </div>
+        <div class="project-hero-accent" aria-hidden="true"><span>N</span><i></i><i></i><i></i></div>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="dash-panel milestone-panel">
+          <div class="panel-heading"><div><span>Project status</span><h2>Milestones</h2></div><button type="button">View timeline ↗</button></div>
+          <div class="milestone-list">
+            <div class="milestone complete"><i>✓</i><div><strong>Discovery &amp; strategy</strong><span>Completed Jun 18</span></div><b>01</b></div>
+            <div class="milestone complete"><i>✓</i><div><strong>UX direction</strong><span>Completed Jun 26</span></div><b>02</b></div>
+            <div class="milestone active"><i></i><div><strong>Visual design</strong><span>In progress · 4 days left</span></div><b>03</b></div>
+            <div class="milestone"><i></i><div><strong>Development</strong><span>Starts Jul 13</span></div><b>04</b></div>
+            <div class="milestone"><i></i><div><strong>Launch</strong><span>Target Jul 30</span></div><b>05</b></div>
+          </div>
+        </article>
+
+        <aside class="dashboard-side-stack">
+          <article class="dash-panel deadline-card">
+            <div class="panel-heading"><div><span>Next deadline</span><h2>Design approval</h2></div><b>04</b></div>
+            <p>Review the homepage direction and share consolidated feedback.</p>
+            <div class="deadline-meta"><span>Friday, July 10</span><strong>4 days</strong></div>
+            <button class="dash-primary" type="button" data-toast="Opening design review…">Review design <span>↗</span></button>
+          </article>
+          <article class="dash-panel support-card">
+            <span>Need help?</span><h2>Talk directly<br />with your team.</h2><p>Typical response time: under 2 hours.</p>
+            <button type="button" data-toast="Starting a new message…">New message <span>→</span></button>
+          </article>
+        </aside>
+      </section>
+
+      <section class="dash-panel deliverables-panel">
+        <div class="panel-heading"><div><span>Recent activity</span><h2>Files &amp; deliverables</h2></div><button type="button" data-toast="Showing all project files">View all files ↗</button></div>
+        <div class="file-table">
+          <div class="file-row file-head"><span>File</span><span>Type</span><span>Updated</span><span>Status</span><span></span></div>
+          <div class="file-row"><div class="file-name"><i>F</i><span><strong>Homepage direction v2</strong><small>12.8 MB · Figma</small></span></div><span>Design</span><span>Today, 10:24</span><span class="status review">Review</span><button type="button" data-toast="Homepage direction selected">↗</button></div>
+          <div class="file-row"><div class="file-name"><i>P</i><span><strong>Project strategy deck</strong><small>4.2 MB · PDF</small></span></div><span>Strategy</span><span>Jul 3</span><span class="status approved">Approved</span><button type="button" data-toast="Strategy deck selected">↓</button></div>
+          <div class="file-row"><div class="file-name"><i>Z</i><span><strong>Brand asset package</strong><small>28.4 MB · ZIP</small></span></div><span>Assets</span><span>Jun 27</span><span class="status approved">Approved</span><button type="button" data-toast="Brand assets selected">↓</button></div>
+        </div>
+      </section>
+    </main>
+
+    <div class="dash-toast" role="status" aria-live="polite" data-dash-toast></div>
+    <script src="dashboard.js"></script>
+  </body>
+</html>
