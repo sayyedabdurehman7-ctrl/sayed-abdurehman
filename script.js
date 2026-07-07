@@ -91,7 +91,7 @@ document.querySelector("[data-contact-form]")?.addEventListener("submit", (event
   event.preventDefault();
   const form = event.currentTarget;
   const status = form.querySelector(".form-status");
-  if (status) status.textContent = "Thank you — your inquiry is ready. PixelCraft Studio will contact you soon.";
+  if (status) status.textContent = "Thank you — your inquiry is ready. CraftedPixels will contact you soon.";
   form.reset();
 });
 
