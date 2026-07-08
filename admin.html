@@ -1,107 +1,112 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#635bff" />
-    <meta name="description" content="PixelCraft Studio admin workspace." />
-    <title>Admin Dashboard — PixelCraft Studio</title>
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="dashboard.css" />
-    <link rel="stylesheet" href="framer-theme.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>CraftedPixels Admin Portal</title>
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./style.css">
   </head>
-  <body class="dashboard admin-dashboard">
-    <button class="dash-menu" type="button" aria-label="Open navigation" data-dash-menu><span></span><span></span></button>
-
-    <aside class="dash-sidebar" data-sidebar>
-      <a class="dash-brand" href="index.html" aria-label="PixelCraft Studio home">
-        <span>PC</span><div><strong>PixelCraft</strong><small>Studio</small></div>
-      </a>
-      <div class="workspace-label"><span>Admin workspace</span><strong>Studio control</strong></div>
-      <nav class="dash-nav" aria-label="Admin navigation">
-        <button class="active" type="button" data-view="overview"><i>⌂</i><span>Overview</span></button>
-        <button type="button" data-view="inquiries"><i>✦</i><span>Inquiries</span><b>7</b></button>
-        <button type="button" data-view="projects"><i>□</i><span>Projects</span><b>5</b></button>
-        <button type="button" data-view="clients"><i>○</i><span>Clients</span></button>
-        <button type="button" data-view="calendar"><i>◇</i><span>Calendar</span></button>
-        <button type="button" data-view="finances"><i>◈</i><span>Finances</span></button>
-      </nav>
-      <div class="admin-quick">
-        <span>Quick action</span>
-        <button type="button" data-toast="New project workspace created">＋ New project</button>
-        <button type="button" data-toast="New client form opened">＋ Add client</button>
-      </div>
-      <div class="sidebar-bottom">
-        <a href="index.html">← View website</a>
-        <a href="portal.html">Customer portal ↗</a>
-      </div>
-    </aside>
-
-    <main class="dash-main">
-      <header class="dash-topbar">
-        <div><span>Studio dashboard · July 2026</span><h1>Good morning, Sayed.</h1></div>
-        <div class="topbar-actions">
-          <button class="icon-button" type="button" aria-label="Search">⌕</button>
-          <button class="icon-button" type="button" aria-label="Notifications"><span></span>♧</button>
-          <button class="profile-button" type="button"><span>SA</span><div><strong>Sayed A.</strong><small>Administrator</small></div><b>⌄</b></button>
-        </div>
-      </header>
-
-      <section class="metrics-grid">
-        <article class="metric-card featured"><div><span>Active projects</span><strong>05</strong></div><i>↗ 12%</i><svg viewBox="0 0 160 60" aria-hidden="true"><path d="M2 54C22 42 26 48 43 33s24 8 39-7 22 9 36-4 21-8 40-19"/></svg></article>
-        <article class="metric-card"><div><span>New inquiries</span><strong>12</strong></div><i>↗ 24%</i><small>7 require a reply</small></article>
-        <article class="metric-card"><div><span>Revenue this month</span><strong>$18.4k</strong></div><i>↗ 8%</i><small>72% of monthly target</small></article>
-        <article class="metric-card"><div><span>Tasks completed</span><strong>86%</strong></div><i>On track</i><small>24 of 28 this week</small></article>
+  <body class="admin-page">
+    <main class="admin-shell">
+      <section class="admin-login" data-admin-login>
+        <img src="./images/logo.png" alt="CraftedPixels" class="admin-logo">
+        <h1>Admin Portal</h1>
+        <p>Login to view package inquiries.</p>
+        <form data-login-form>
+          <label>Username<input type="text" name="username" required></label>
+          <label>Password<input type="password" name="password" required></label>
+          <button class="btn btn-primary" type="submit">Login</button>
+          <p class="form-status" role="status"></p>
+        </form>
       </section>
 
-      <section class="admin-main-grid">
-        <article class="dash-panel pipeline-panel">
-          <div class="panel-heading"><div><span>Live overview</span><h2>Project pipeline</h2></div><button type="button" data-toast="Opening all projects…">All projects ↗</button></div>
-          <div class="pipeline">
-            <div class="pipeline-column">
-              <header><span>Planning</span><b>2</b></header>
-              <article class="pipeline-card"><div><span>NG</span><i>Website</i></div><h3>Nexa Group</h3><p>Strategy &amp; information architecture</p><footer><small>Due Jul 08</small><b>SA</b></footer></article>
-              <article class="pipeline-card"><div><span>BO</span><i>Brand + Web</i></div><h3>Bloom Organics</h3><p>Discovery workshop scheduled</p><footer><small>Due Jul 12</small><b>MK</b></footer></article>
-            </div>
-            <div class="pipeline-column">
-              <header><span>In progress</span><b>2</b></header>
-              <article class="pipeline-card yellow-card"><div><span>AU</span><i>E-commerce</i></div><h3>Aurelia Objects</h3><p>Homepage development · 74%</p><div class="mini-progress"><i style="width:74%"></i></div><footer><small>Due Jul 18</small><b>SA</b></footer></article>
-              <article class="pipeline-card"><div><span>VF</span><i>Product</i></div><h3>Velocity Fitness</h3><p>UI design system · 48%</p><div class="mini-progress"><i style="width:48%"></i></div><footer><small>Due Jul 24</small><b>JL</b></footer></article>
-            </div>
-            <div class="pipeline-column">
-              <header><span>Review</span><b>1</b></header>
-              <article class="pipeline-card"><div><span>LU</span><i>Motion</i></div><h3>Luma Identity</h3><p>Final animation awaiting approval</p><footer><small>Client review</small><b>MK</b></footer></article>
-              <button class="add-card" type="button" data-toast="New project card added">＋ Add project</button>
-            </div>
+      <section class="admin-dashboard" data-admin-dashboard hidden>
+        <div class="admin-topbar">
+          <div>
+            <p class="kicker">CraftedPixels</p>
+            <h1>Customer Inquiries</h1>
           </div>
-        </article>
-
-        <aside class="dashboard-side-stack">
-          <article class="dash-panel schedule-card">
-            <div class="panel-heading"><div><span>Monday</span><h2>Today</h2></div><b>06</b></div>
-            <div class="schedule-list">
-              <div><time>09:30</time><i></i><span><strong>Nexa design review</strong><small>Google Meet · 45 min</small></span></div>
-              <div><time>11:00</time><i></i><span><strong>Studio stand-up</strong><small>Team room · 20 min</small></span></div>
-              <div><time>14:30</time><i></i><span><strong>Bloom discovery</strong><small>Google Meet · 60 min</small></span></div>
-              <div><time>16:00</time><i></i><span><strong>Deep work</strong><small>Aurelia development</small></span></div>
-            </div>
-            <button class="dash-secondary" type="button" data-toast="Calendar opened">Open calendar ↗</button>
-          </article>
-        </aside>
-      </section>
-
-      <section class="dash-panel leads-panel">
-        <div class="panel-heading"><div><span>Sales</span><h2>Recent inquiries</h2></div><div class="table-filters"><button class="active" type="button" data-lead-filter="all">All</button><button type="button" data-lead-filter="new">New</button><button type="button" data-lead-filter="qualified">Qualified</button></div></div>
-        <div class="lead-table">
-          <div class="lead-row lead-head"><span>Client</span><span>Service</span><span>Budget</span><span>Received</span><span>Status</span><span></span></div>
-          <div class="lead-row" data-lead-status="new"><div class="lead-name"><i>MK</i><span><strong>Maya Khan</strong><small>North &amp; Co.</small></span></div><span>Business website</span><span>$5k–$8k</span><span>18 min ago</span><span class="status new">New</span><button type="button" data-toast="Opening Maya's inquiry">↗</button></div>
-          <div class="lead-row" data-lead-status="qualified"><div class="lead-name"><i>JO</i><span><strong>James Okafor</strong><small>Forma Studio</small></span></div><span>Portfolio website</span><span>$3k–$5k</span><span>2 hours ago</span><span class="status qualified">Qualified</span><button type="button" data-toast="Opening James's inquiry">↗</button></div>
-          <div class="lead-row" data-lead-status="new"><div class="lead-name"><i>AL</i><span><strong>Ana Li</strong><small>Verde Labs</small></span></div><span>Motion + web</span><span>$8k–$12k</span><span>Yesterday</span><span class="status new">New</span><button type="button" data-toast="Opening Ana's inquiry">↗</button></div>
+          <div class="admin-actions">
+            <button class="btn btn-secondary" type="button" data-clear-all>Clear All</button>
+            <button class="btn btn-primary" type="button" data-logout>Logout</button>
+          </div>
         </div>
+        <div class="inquiries-list" data-inquiries-list></div>
       </section>
     </main>
 
-    <div class="dash-toast" role="status" aria-live="polite" data-dash-toast></div>
-    <script src="dashboard.js"></script>
+    <script>
+      const loginPanel = document.querySelector("[data-admin-login]");
+      const dashboard = document.querySelector("[data-admin-dashboard]");
+      const loginForm = document.querySelector("[data-login-form]");
+      const list = document.querySelector("[data-inquiries-list]");
+      const key = "craftedpixelsInquiries";
+
+      const getItems = () => JSON.parse(localStorage.getItem(key) || "[]");
+      const setItems = (items) => localStorage.setItem(key, JSON.stringify(items));
+
+      function showDashboard() {
+        loginPanel.hidden = true;
+        dashboard.hidden = false;
+        renderInquiries();
+      }
+
+      function renderInquiries() {
+        const items = getItems();
+        if (!items.length) {
+          list.innerHTML = '<div class="empty-card">No inquiries yet.</div>';
+          return;
+        }
+        list.innerHTML = items.map((item) => `
+          <article class="inquiry-card">
+            <div>
+              <h2>${item.name || "No name"}</h2>
+              <small>${item.date || ""}</small>
+            </div>
+            <p><b>Email:</b> ${item.email || ""}</p>
+            <p><b>WhatsApp:</b> ${item.whatsapp || ""}</p>
+            <p><b>Package:</b> ${item.package || ""}</p>
+            <p><b>SKU:</b> ${item.sku || ""}</p>
+            <p><b>Message:</b> ${item.message || ""}</p>
+            <button class="btn btn-secondary" type="button" data-delete="${item.id}">Delete</button>
+          </article>
+        `).join("");
+      }
+
+      loginForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const status = loginForm.querySelector(".form-status");
+        if (loginForm.username.value === "admin" && loginForm.password.value === "admin123") {
+          sessionStorage.setItem("craftedpixelsAdmin", "yes");
+          showDashboard();
+        } else {
+          status.textContent = "Invalid username or password.";
+        }
+      });
+
+      list.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-delete]");
+        if (!button) return;
+        setItems(getItems().filter((item) => String(item.id) !== button.dataset.delete));
+        renderInquiries();
+      });
+
+      document.querySelector("[data-clear-all]").addEventListener("click", () => {
+        if (!confirm("Clear all inquiries?")) return;
+        setItems([]);
+        renderInquiries();
+      });
+
+      document.querySelector("[data-logout]").addEventListener("click", () => {
+        sessionStorage.removeItem("craftedpixelsAdmin");
+        dashboard.hidden = true;
+        loginPanel.hidden = false;
+        loginForm.reset();
+      });
+
+      if (sessionStorage.getItem("craftedpixelsAdmin") === "yes") showDashboard();
+    </script>
   </body>
 </html>
