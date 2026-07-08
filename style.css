@@ -106,7 +106,9 @@ h2 { margin-bottom: 12px; font-size: clamp(34px, 4.4vw, 60px); line-height: 1.12
 .section-head > p:last-child, .founder-copy p, .step p, .testimonial span, details p { color: var(--muted); }
 .split { display: grid; grid-template-columns: .9fr 1.1fr; gap: 50px; align-items: start; }
 
-.founder { overflow: hidden; background: #0d0d0d; }
+.founder { position: relative; overflow: hidden; background: #0d0d0d; }
+.founder::before { position: absolute; inset: 0; pointer-events: none; content: ""; background: radial-gradient(circle at 18% 28%, rgba(255,193,7,.12), transparent 32%), linear-gradient(120deg, rgba(255,255,255,.02), transparent 42%), url("./about-image.svg"); background-repeat: no-repeat; background-size: auto, auto, min(460px, 42vw); background-position: center, center, 94% 14%; opacity: .55; }
+.founder .container { position: relative; z-index: 1; }
 .founder-layout { display: grid; grid-template-columns: .86fr 1.14fr; gap: 64px; align-items: center; }
 .founder-photo-card { position: relative; display: grid; min-height: 590px; place-items: end center; overflow: hidden; border: 1px solid rgba(255,196,0,.42); border-radius: 32px; background: linear-gradient(180deg, rgba(255,196,0,.08), rgba(255,255,255,.025)); box-shadow: 0 28px 80px rgba(0,0,0,.38), 0 0 55px rgba(255,196,0,.09); }
 .founder-glow { position: absolute; width: 72%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(255,196,0,.32), transparent 68%); filter: blur(8px); }
@@ -254,7 +256,9 @@ summary::after { float: right; color: var(--yellow); content: "+"; }
 details[open] summary::after { content: "-"; }
 details p { margin: 12px 0 0; }
 
-.contact { padding-top: 70px; }
+.contact { position: relative; overflow: hidden; padding-top: 70px; }
+.contact::before { position: absolute; inset: 0; pointer-events: none; content: ""; background: linear-gradient(90deg, rgba(13,13,13,.95), rgba(13,13,13,.72)), url("./contact-bg.png"); background-size: cover; background-position: center; opacity: .45; }
+.contact .container { position: relative; z-index: 1; }
 .contact-box { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; padding: 42px; }
 .contact-copy p:not(.kicker) { max-width: 440px; color: var(--muted); }
 .contact-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
